@@ -1,0 +1,17 @@
+machine:
+  timezone:
+    America/Denver
+  node:
+    version: 5
+dependencies:
+  pre:
+    - rm -rf node_modules/
+test:
+  override:
+    - npm run ci
+deployment:
+  release:
+    tag: /v.*/
+    owner: LeisureLink
+    commands:
+      - npm publish
