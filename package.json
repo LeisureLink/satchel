@@ -32,13 +32,14 @@
   },
   "devDependencies": {
     "babel-cli": "^6.3.17",
+    "babel-core": "latest",
+    "babel-plugin-add-module-exports": "^0.1.2",
     "babel-preset-es2016-node5": "^1.1.2",
     "babel-register": "^6.3.13",
     "code": "^2.0.1",
     "eslint-config-leisurelink": "^1.0.1",
     "istanbul": "^0.4.1",
     "mocha": "^2.3.4",
-    "trash-cli": "^1.2.0",
-    "babel-core": "latest"
+    "trash-cli": "^1.2.0"
   }
 }
