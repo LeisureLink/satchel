@@ -11,9 +11,7 @@
     "postinstall": "npm run build",
     "coverage": "istanbul cover npm test",
     "ci": "npm run test && npm run coverage",
-    "clean": "./node_modules/.bin/trash ./lib",
-    "preversion": "./scripts/check_branch.sh",
-    "postversion": "git push origin master --tags"
+    "clean": "./node_modules/.bin/trash ./lib"
   },
   "repository": {
     "type": "git",
