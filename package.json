@@ -4,7 +4,15 @@
   "description": "Holds the keys for authentic",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test"
+    "pretest": "npm run build",
+    "test": "_mocha test",
+    "prebuild": "npm run clean",
+    "build": "./node_modules/.bin/babel src -d lib",
+    "prepublish": "npm run build",
+    "postinstall": "npm run build",
+    "coverage": "istanbul cover npm test",
+    "ci": "npm run test && npm run coverage",
+    "clean": "./node_modules/.bin/trash ./lib"
   },
   "repository": {
     "type": "git",
@@ -18,11 +26,16 @@
   "homepage": "https://github.com/LeisureLink/satchel#readme",
   "dependencies": {
     "bluebird": "^3.1.1",
-    "eslint-config-leisurelink": "^1.0.1",
     "pem": "^1.8.1"
   },
   "devDependencies": {
+    "babel-cli": "^6.3.17",
+    "babel-preset-es2016-node5": "^1.1.2",
+    "babel-register": "^6.3.13",
     "code": "^2.0.1",
-    "mocha": "^2.3.4"
+    "eslint-config-leisurelink": "^1.0.1",
+    "istanbul": "^0.4.1",
+    "mocha": "^2.3.4",
+    "trash-cli": "^1.2.0", "babel-core": "latest"
   }
 }
