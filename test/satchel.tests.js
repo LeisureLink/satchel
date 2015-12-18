@@ -1,18 +1,18 @@
 'use strict';
 
-const Sachel = require('../');
+const Satchel = require('../');
 
-describe('sachel', () => {
+describe('satchel', () => {
 
-  let sachel;
+  let satchel;
   before(() => {
-    sachel = new Sachel();
-    expect(sachel).to.be.ok;
+    satchel = new Satchel();
+    expect(satchel).to.be.ok;
   });
 
   it('initializes pem file in memory', (done) => {
 
-    sachel.initialize()
+    satchel.initialize()
       .then((data) => {
 
         expect(data.csr).to.be.ok;
