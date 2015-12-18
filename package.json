@@ -1,7 +1,7 @@
 {
-  "name": "satchel",
+  "name": "@leisurelink/satchel",
   "version": "1.0.0",
-  "description": "Holds the keys for authentic",
+  "description": "A Bag of Keys for Authentic",
   "main": "index.js",
   "scripts": {
     "pretest": "npm run build",
@@ -12,11 +12,13 @@
     "postinstall": "npm run build",
     "coverage": "istanbul cover npm test",
     "ci": "npm run test && npm run coverage",
-    "clean": "./node_modules/.bin/trash ./lib"
+    "clean": "./node_modules/.bin/trash ./lib",
+    "preversion": "./scripts/check_branch.sh",
+    "postversion": "git push origin master --tags"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://TylerGarlick@github.com/LeisureLink/satchel.git"
+    "url": "git+https://github.com/LeisureLink/satchel.git"
   },
   "author": "Tyler Garlick <tgarlick@leisurelink.com>",
   "license": "ISC",
@@ -36,6 +38,7 @@
     "eslint-config-leisurelink": "^1.0.1",
     "istanbul": "^0.4.1",
     "mocha": "^2.3.4",
-    "trash-cli": "^1.2.0", "babel-core": "latest"
+    "trash-cli": "^1.2.0",
+    "babel-core": "latest"
   }
 }
