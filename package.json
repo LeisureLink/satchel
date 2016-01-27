@@ -6,12 +6,12 @@
   "scripts": {
     "pretest": "npm run build",
     "test": "_mocha test",
-    "build": "./node_modules/.bin/babel src -d lib",
+    "lint": "esw --quiet",
+    "build": "babel src -d lib",
     "prepublish": "npm run build",
-    "postinstall": "npm run build",
     "coverage": "istanbul cover npm test",
-    "ci": "npm run test && npm run coverage",
-    "clean": "./node_modules/.bin/trash ./lib"
+    "ci": "npm run lint && npm run coverage",
+    "clean": "trash ./lib"
   },
   "repository": {
     "type": "git",
@@ -30,11 +30,14 @@
   "devDependencies": {
     "babel-cli": "^6.3.17",
     "babel-core": "latest",
+    "babel-eslint": "^5.0.0-beta6",
     "babel-plugin-add-module-exports": "^0.1.2",
     "babel-preset-es2016-node5": "^1.1.2",
     "babel-register": "^6.3.13",
     "code": "^2.0.1",
+    "eslint": "^1.10.3",
     "eslint-config-leisurelink": "^1.0.1",
+    "eslint-watch": "^2.1.6",
     "istanbul": "^0.4.1",
     "mocha": "^2.3.4",
     "trash-cli": "^1.2.0"

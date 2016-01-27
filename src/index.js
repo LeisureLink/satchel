@@ -21,18 +21,18 @@ const generateKeys = async () => {
   return { privateKey, publicKey };
 };
 
-let _keys;
+let keys;
 export default {
 
   async keys() {
-    if (!_keys) {
-      _keys = await generateKeys();
+    if (!keys) {
+      keys = await generateKeys();
     }
 
-    return _keys;
+    return keys;
   },
 
   reset() {
-    _keys = null;
+    keys = null;
   }
-}
+};
