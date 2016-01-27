@@ -23,10 +23,10 @@ module.exports = (wallaby) => {
       type: 'node'
     },
     bootstrap: () => {
-      require('./test/helper')
+      require('./test/helper');
     },
     compilers: {
       '**/*.js': wallaby.compilers.babel(babelConfiguration)
     }
-  }
+  };
 };
