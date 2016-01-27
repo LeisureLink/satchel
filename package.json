@@ -1,6 +1,6 @@
 {
   "name": "@leisurelink/satchel",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A Bag of Keys for Authentic",
   "main": "index.js",
   "scripts": {
